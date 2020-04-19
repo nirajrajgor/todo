@@ -45,7 +45,7 @@ class IndexPage extends Component {
 					<button type="submit">Submit</button>
 				</form>
 				{
-					localStorage.getItem('tasks') ?
+					typeof window !== 'undefined' && localStorage.getItem('tasks') ?
 						JSON.parse(localStorage.getItem('tasks')).map((task, i) => (
 							<div className="list">
 								<span key={i}>{task.text}</span>{' '}
