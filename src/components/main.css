@@ -1,3 +1,11 @@
+body {
+	position: relative;
+	min-height: 100vh;
+}
+footer {
+	position: absolute;
+	bottom: 10px;
+}
 main {
 	width: 600px;
 }
@@ -37,4 +45,9 @@ form button {
 	font-size: 15px;
 	padding: 5px 10px;
 	border-radius: 4px;
+}
+@media only screen and (max-width: 600px) {
+	main {
+		width: 100%;
+	}
 }

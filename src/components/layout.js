@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
 			>
 				<main>{children}</main>
 				<footer>
-					© {new Date().getFullYear()}, Built by <a href="https://nirajrajgor.com">Niraj Rajgor</a>  with
+					© {new Date().getFullYear()}, Developed by <a href="https://nirajrajgor.com">Niraj Rajgor</a>  with
           {` `}
 					<a href="https://www.gatsbyjs.org">Gatsby</a>
 				</footer>
