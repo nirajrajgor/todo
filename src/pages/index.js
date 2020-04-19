@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import "../components/main.css";
 
 class IndexPage extends Component {
 
@@ -40,19 +41,18 @@ class IndexPage extends Component {
 		return (
 			<Layout>
 				<SEO title="Home" />
-				<h1>Todos</h1>
+				<h2>Add Todos</h2>
 				<form onSubmit={this.onSubmitMethod}>
-					<input type="text" value={this.state.taskName} onChange={this.onChangeValue} />
+					<input type="text" required value={this.state.taskName} onChange={this.onChangeValue} />
 					<button type="submit">Submit</button>
 				</form>
 				{
 					localStorage.getItem('tasks') ?
 						JSON.parse(localStorage.getItem('tasks')).map((task, i) => (
-							<>
+							<div className="list">
 								<span key={i}>{task.text}</span>{' '}
 								<button onClick={() => this.deleteTask(task.id)}>Delete</button>
-								<br />
-							</>
+							</div>
 						))
 						:
 						<p>Nothing to do! Add a task?</p>
