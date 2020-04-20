@@ -10,7 +10,8 @@ Simple todo application built with [Gatsby](https://www.gatsbyjs.org/) framework
 ##  Purpose
 
 * Learn the Gatsby framework by building simple app
-* Learn deploying the Gatsby todo app to hosting server.
+* Learn deploying the Gatsby todo app to [Digitalocean](https://www.digitalocean.com/) server.
+* Learn [NGINX](https://www.nginx.com/)
 
 
 ## Author
