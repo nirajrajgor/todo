@@ -3,7 +3,7 @@
   Todo application
 </h1>
 
-Simple todo application built with Gatsby framework.
+Simple todo application built with [Gatsby](https://www.gatsbyjs.org/) framework.
 
 [VIEW DEMO](http://165.22.213.22:9000/)
 
