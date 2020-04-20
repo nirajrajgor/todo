@@ -18,5 +18,9 @@ Simple todo application built with [Gatsby](https://www.gatsbyjs.org/) framework
 
 [Niraj Rajgor](https://nirajrajgor.com/)
 
+## License
+
+This project is open source and available under the [MIT License](https://github.com/nirajrajgor/todo/blob/master/LICENSE).
+
 
 <!-- AUTO-GENERATED-CONTENT:END -->
