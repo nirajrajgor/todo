@@ -7,6 +7,21 @@ Simple todo application built with [Gatsby](https://www.gatsbyjs.org/) framework
 
 [VIEW DEMO](http://165.22.213.22:9000/)
 
+##  Get Up and Running
+1. Clone the repo.
+2. Install the Gatsby CLI.
+	```
+	npm install -g gatsby-cli
+	```
+3. Start the site in develop mode.
+	```
+	gatsby develop
+	```
+4. Build the site for deploying to production.
+	```
+	gatsby build
+	```
+
 ##  Purpose
 
 * Learn the Gatsby framework by building simple app
