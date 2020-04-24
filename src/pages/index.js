@@ -35,6 +35,18 @@ class IndexPage extends Component {
 		this.forceUpdate();
 	}
 
+	toggleTask = (id) => {
+		let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+		tasks = tasks.map(task => {
+			if (task.id === id) {
+				task.complete = !task.complete;
+			}
+			return task;
+		});
+		localStorage.setItem('tasks', JSON.stringify(tasks));
+		this.forceUpdate();
+	}
+
 	render() {
 		return (
 			<Layout>
@@ -45,13 +57,39 @@ class IndexPage extends Component {
 					<button type="submit">Submit</button>
 				</form>
 				{
-					typeof window !== 'undefined' && localStorage.getItem('tasks') ?
-						JSON.parse(localStorage.getItem('tasks')).map((task, i) => (
-							<div className="list">
-								<span key={i}>{task.text}</span>{' '}
-								<button onClick={() => this.deleteTask(task.id)}>Delete</button>
-							</div>
-						))
+					typeof window !== 'undefined' && localStorage.getItem('tasks') && JSON.parse(localStorage.getItem('tasks')).length > 0 ?
+						<>
+							<h4>Incomplete Task</h4>
+							{
+								JSON.parse(localStorage.getItem('tasks')).map((task, i) => {
+									if (!task.complete) {
+										return (
+											<div className="list">
+												<input type="checkbox" onClick={() => this.toggleTask(task.id)} />
+												<span key={i}>{task.text}</span>{' '}
+												<button onClick={() => this.deleteTask(task.id)}>Delete</button>
+											</div>
+										)
+									}
+									return ""
+								})
+							}
+							<h4>Completed Task</h4>
+							{
+								JSON.parse(localStorage.getItem('tasks')).map((task, i) => {
+									if (!task.complete) {
+										return "";
+									}
+									return (
+										<div className="list">
+											<input type="checkbox" checked={true} onClick={() => this.toggleTask(task.id)} />
+											<span key={i}>{task.text}</span>{' '}
+											<button onClick={() => this.deleteTask(task.id)}>Delete</button>
+										</div>
+									)
+								})
+							}
+						</>
 						:
 						<p>Nothing to do! Add a task?</p>
 
