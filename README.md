@@ -5,7 +5,7 @@
 
 Simple todo application built with [Gatsby](https://www.gatsbyjs.org/) framework.
 
-[VIEW DEMO](http://165.22.213.22:9000/)
+[VIEW DEMO](https://todo.nirajrajgor.com/)
 
 ##  Get Up and Running
 1. Clone the repo.
